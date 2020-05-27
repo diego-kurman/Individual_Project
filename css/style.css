@@ -1,0 +1,362 @@
+/* soft reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #01100f;
+  background-size: auto 100vh; 
+  font-family: 'Source Code Pro', monospace;
+  height: 100vh;
+  font-size: 12px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+   
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+ list-style: none; 
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 1s, color 1s;
+  border-radius: 4px;
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: #01100f;
+  color: white;
+  transition: text-shadow 1s;
+  border-radius: 4px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-shadow: 3px 2px 10px rgba(255,255,255,.5);
+
+}
+
+
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: 1s ease 500ms animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+h4,
+.site-subtitle, 
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+h4:hover,
+.site-subtitle:hover, 
+.site-title:hover {
+  color: whitesmoke;
+  text-align: center;
+  text-shadow: whitesmoke 0px 2px 30px;
+}
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Press Start 2P', cursive;
+  /*font-family: 'Gloria Hallelujah', cursive;*/
+  line-height: 3.2em;
+}
+
+.site-subtitle {
+  font-size: 1.1em;
+ font-style: italic;
+ /*font-family: 'Press Start 2P', cursive; */
+ line-height: 1.2em;
+ margin-left: 43%;
+}
+h4 {
+  color: whitesmoke;
+  margin-left: 73%;
+}
+.sobre,
+.contato,
+.portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2,
+.contato h2,
+.portfolio h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.sobre p {
+  color: white;
+  text-indent: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+
+.sobre a {
+  color: white;
+  text-decoration: underline;
+}
+
+.sobre a:hover {
+  background-color: cyan;
+  text-decoration: none;
+  color: magenta;
+}
+
+.sobre .avatar {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin-left: 2em;
+}
+
+@media (min-width: 600px) {
+  .sobre .avatar {
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    float: right;
+  }
+}
+
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 100%;
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
+  
+}
+.bBarKays {
+  background-image: url(../img/soulfinger.jpg);
+}
+
+.bAlicia {
+  background-image: url(../img/The_Diary.jpg);
+}
+
+.bJacquees {
+  background-image: url(../img/verify.jpeg);
+}
+
+.bDjonga {
+  background-image: url(../img/djongador.jpg);
+}
+
+.bTravis {
+  background-image: url(../img/astroworld2.jpg);
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  transition: transform 500ms;
+}
+
+/* .img-portfolio:hover {
+  transform: scale(1.2) rotate(-2deg);
+} */
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 500ms;
+  text-shadow: 0px 0px 130px rgba(255,255,255,.5);
+}
+
+.contato a:active,
+.contato a:hover  {
+  text-decoration: none;
+  font-size: 3.9em;
+  text-shadow: 0px 0px 7px rgba(255,255,255,.5);
+}
+
+
+::-webkit-scrollbar
+{
+  width: 0;
+}
+#scrollpath
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255,255,255,0.05);
+}
+#progressbar
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: linear-gradient(to top, #008aff,#00ffe7 );
+  animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+  0%, 100%
+  {
+    filter: hue-rotate(0 deg);
+  }
+  50%
+  {
+    filter: hue-rotate(360 deg);
+  }
+}
+#progressbar::before
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to top, #008aff,#00ffe7 );
+  filter: blur(30px);
+
+}
+
+#progressbar::after
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to top, #008aff,#00ffe7 );
+  filter: blur(30px);
+
+}
+
+
+
+

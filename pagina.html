@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Black Concept</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Press+Start+2P&family=Source+Code+Pro&isplay=swap"
+    rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
+</head>
+</head>
+
+<body>
+    <header>
+      <nav class="menu">
+        <ul class="container">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#portfolio">Musicas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div id="progressbar"></div>
+      <div id="scrollpath"></div>
+      <div class="titulo">
+        <h1 class="site-title">Black Concept</h1>
+        <h2 class="site-subtitle">"Para ficar mais claro eu escureci"</h2>
+        <h4>Rinccon Sapiencia</h4>
+      </div>
+    </header>
+    <section class="sobre container" id="sobre">
+      <h2>Sobre</h2>
+  
+      <p>
+        Estudante de Análise e desenvolvimento na Bandtec ( São Paulo - SP). Atualmente
+        desenvolvendo Habilidades em Java script, Banco de Dados, Arquitetura computacional, 
+        Relacionamento socioemocional, HTML5 e CSS3 entre outros .
+      </p>
+  
+      <p>
+        Tive meu contato com tecnologia desde a infância pois sempre gostei de jogos, em especial 
+        jogos de PC, porém só fui fazer meu primeiro curso de informática aos meados de 2013 
+        quando fiz um curso de informática Básica pela escola Microworld.
+      </p>
+  
+      <p>
+        Logo após o término de meu curso comecei a estudar por conta HTML básico e anos depois 
+        recebi uma oportunidade de estudar na UNIBES (União Brasileiro-Israelita do Bem-Estar Social). 
+        Aonde pude me aprofundar em web design e consequentemente pude trabalhar na área de 
+        tecnologia de um banco americano e aprendi muito ao ponto de instigar minha vontade de querer me
+         envolver e aprender mais sobre tecnologia.
+      </p>
+  
+      <p>
+        Ao perceber que tinha um longo caminho a percorrer em busca de um conhecimento para me
+        adequar ao mercado de trabalho, tracei um objetivo ao ensino superior ao me ingressar a universidade
+        paulista (UNIP) em Ciência da computação. Porém não me sentir satisfeito com o nível de ensino e 
+        envolvimento com da parte da faculdade com os estudante, então recebi um conselho e uma indicação de uma nova 
+        faculdade a Bandtec aonde estou sendo desafiado com conteúdos estimulantes e com um total incentivo e apoio 
+        de meus novos professores.
+      </p>
+      
+        
+      
+        
+    </section>
+    <section class="portfolio container" id="portfolio">
+      <h2>Musicas</h2>
+  
+      <div class="grid">
+  
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/barkey.jpg" alt="The Bar Kays">
+            </figure>
+            <div class="card-back bBarKays">
+                <audio src="MUSICAS/Running.mp3" controls muted ></audio>
+            </div>
+          </div>
+        </div>
+  
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/Alicia2.jpg" alt="Alicia">
+            </figure>
+            <div class="card-back bAlicia">
+                <audio src="MUSICAS/Alicia.mp3" controls ></audio>
+            </div>
+          </div>
+        </div>
+  
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/jacquees2.jpg" alt="Jacquees">
+            </figure>
+            <div class="card-back bJacquees">
+                <audio src="MUSICAS/Jacquees.mp3" controls  ></audio>
+            </div>
+          </div>
+        </div>
+  
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/djonga.jpg" alt="Djonga">
+            </figure>
+            <div class="card-back bDjonga">
+              <audio src="MUSICAS/Djonga.mp3" controls ></audio>
+            </div>
+          </div>
+        </div>
+  
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/travis.jpg" alt="Travis Scott">
+            </figure>
+            <div class="card-back bTravis">
+             <audio src="MUSICAS/yosemite.mp3" controls ></audio>
+            </div>
+          </div>
+        </div>
+  
+    </section>
+    <section class="contato container" id="contato">
+      <h2>Contato</h2>
+  
+      <div class="grid icons">
+        <a target="_blank" href="https://github.com/diego-kurman">
+          <i class="fab fa-github"></i>
+        </a>
+        <a target="_blank" href="mailto:diegoandradekurman@gmail.com?subject=Hello%20again">
+            <i class="far fa-envelope"></i>
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/diego-kurman-5a32a1176/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/diegokurman/">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+  </body>
+  </html>
+
+  <script type="text/javascript">
+    let progress = document.getElementById('progressbar'  );
+    let totalHeight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function (){
+      let progressHeight = (window.pageXOffset / totalHeight) * 100; 
+      progress.style.height = progressHeight + "%";
+    }
+  </script>
