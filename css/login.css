@@ -26,13 +26,21 @@ h1 {
   font-size: 32px;
   letter-spacing: 1px;
   margin: 20px 0;
+  color: whitesmoke;
+}
+
+h1:hover {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 20px 0;
   color: black;
 }
 
+
 form {
   margin: 20px 0;
-  background-color: white;
-  padding: 30px 25px;
+  background-color: whitesmoke;
+  padding: 80px 95px;
   border-radius: 5px;
 }
 
@@ -41,7 +49,7 @@ form .input-block {
 }
 
 form .input-block label {
-  font-size: 14px;
+  font-size: 24px;
   color: black;
 }
 
@@ -59,13 +67,20 @@ form .input-block input {
 
 form .btn-login {
   display: block;
-  min-width: 120px;
+  min-width: 170px;
   border: none;
   background-color: black;
   color: whitesmoke;
   border-radius: 25px;
   margin: auto;
   padding: 7px;
+}
+
+.btn-login:hover {
+
+  background-color: rgba(0, 0, 0, 0.664);
+  color: rgba(245, 245, 245, 0.575);
+
 }
 
 
@@ -119,14 +134,14 @@ form .btn-login {
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-@keyframes down {
+ @keyframes down {
   from {
     transform: translateY(0);
   }
   to {
     transform: translateY(100vh);
   }
-}
+} 
 
 /* FORM NO-NO */
 
@@ -152,7 +167,7 @@ form.validate-error {
 body {
   overflow: hidden;
 }
-.squares li {
+/* .squares li {
   width: 40px;
   height: 40px;
   background-color: whitesmoke;
@@ -174,7 +189,7 @@ body {
   to {
     transform: translateY(-800px) rotate(960deg);
   }
-}
+} */
 
 /* Gradient  */
 
